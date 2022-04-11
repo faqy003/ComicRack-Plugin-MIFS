@@ -41,6 +41,9 @@ jobs:
         # Artifact name
         name: ComicRack_Plugin_MIFS
         # A file, directory or wildcard pattern that describes what to upload
-        path: build/*.dll
+        path: |
+          libfunc/x64/Release/libfunc.dll
+          bin/Release/net461/ComicRack.Plugin.Avif.dll
+          bin/Release/net461/0Harmony.dll
         # The desired behavior if no files are found using the provided path.
       
