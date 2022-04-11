@@ -24,12 +24,15 @@
   <ItemGroup>
     <Reference Include="ComicRack.Engine">
       <HintPath>L:\Software\ComicsViewer_chn\ComicRack\ComicRack.Engine.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
     </Reference>
     <Reference Include="ComicRack.Plugins">
       <HintPath>L:\Software\ComicsViewer_chn\ComicRack\ComicRack.Plugins.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
     </Reference>
     <Reference Include="cYo.Common">
       <HintPath>L:\Software\ComicsViewer_chn\ComicRack\cYo.Common.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
     </Reference>
     <Reference Include="System.Net.Http" />
   </ItemGroup>
