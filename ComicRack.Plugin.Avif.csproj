@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+	  <LangVersion>10.0</LangVersion>
+	  <Nullable>enable</Nullable>
+	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="dll_test\**" />
+    <Compile Remove="libfunc\**" />
+    <EmbeddedResource Remove="dll_test\**" />
+    <EmbeddedResource Remove="libfunc\**" />
+    <None Remove="dll_test\**" />
+    <None Remove="libfunc\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lib.Harmony" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ComicRack.Engine">
+      <HintPath>L:\Software\ComicsViewer_chn\ComicRack\ComicRack.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="ComicRack.Plugins">
+      <HintPath>L:\Software\ComicsViewer_chn\ComicRack\ComicRack.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="cYo.Common">
+      <HintPath>L:\Software\ComicsViewer_chn\ComicRack\cYo.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+</Project>

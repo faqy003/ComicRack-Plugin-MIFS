@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ComicRack.Plugin.Avif": {
+      "commandName": "Project",
+      "commandLineArgs": "-dso -ssc",
+      "workingDirectory": "L:\\Software\\ComicsViewer_chn\\ComicRack"
+    }
+  }
+}
