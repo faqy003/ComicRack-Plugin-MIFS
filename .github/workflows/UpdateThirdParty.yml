@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: build dav1d
-    - run: |
+      run: |
         git clone --depth 1 https://code.videolan.org/videolan/dav1d.git
         cd dav1d
         mkdir build && cd build
@@ -27,7 +27,7 @@ jobs:
         cd ../..
     
     - name: build libavif
-    - run: |
+      run: |
         git clone --depth 1 https://github.com/AOMediaCodec/libavif.git
         cd libavif
         mkdir build && cd build
