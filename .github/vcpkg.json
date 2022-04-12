@@ -1,0 +1,13 @@
+{
+  "dependencies": [
+    {
+      "name": "libyuv",
+      "platform": "windows"
+    },
+    {
+      "name": "dav1d",
+      "platform": "windows"
+    },
+    "rapidjson"
+  ]
+}
