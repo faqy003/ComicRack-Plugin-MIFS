@@ -41,6 +41,6 @@ jobs:
       with:
         name: Artifacts
         path: |
-          ${{ env.VCPKG_DEFAULT_BINARY_CACHE }}/*
+          ${{ env.RUNVCPKG_VCPKG_ROOT }}/installed/*
           libavif/build/*
       
