@@ -17,14 +17,14 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: build dav1d
-      run: |
-        git clone --depth 1 https://code.videolan.org/videolan/dav1d.git
-        cd dav1d
-        mkdir build && cd build
-        meson --default-library=static --buildtype release ..
-        ninja
-        cd ../..
+#     - name: build dav1d
+#       run: |
+#         git clone --depth 1 https://code.videolan.org/videolan/dav1d.git
+#         cd dav1d
+#         mkdir build && cd build
+#         meson --default-library=static --buildtype release ..
+#         ninja
+#         cd ../..
     
     - name: build libavif
       run: |
