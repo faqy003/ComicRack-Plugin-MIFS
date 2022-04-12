@@ -21,6 +21,7 @@ jobs:
       uses: lukka/run-vcpkg@v10.2
       with:
           runVcpkgInstall: true
+          vcpkgGitCommitId: 'bf43f7d00f09b225f866a5227b8464a27c86a8c0'
         
 #     - name: build dav1d
 #       run: |
