@@ -19,6 +19,7 @@ jobs:
     
     - name: run-vcpkg
       uses: lukka/run-vcpkg@v10.2
+      id: runvcpkg
       with:
           runVcpkgInstall: true
           vcpkgGitCommitId: 'bf43f7d00f09b225f866a5227b8464a27c86a8c0'
@@ -40,6 +41,6 @@ jobs:
       with:
         name: Artifacts
         path: |
-          ${{ github.workspace }}/vcpkg/bincache/*
+          ${{ steps.runvcpkg.outputs.VCPKG_INSTALLED_DIR }}/vcpkg/bincache/*
           libavif/build/*
       
