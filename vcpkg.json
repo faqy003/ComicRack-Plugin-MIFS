@@ -1,4 +1,6 @@
 {
+  "name": "ComicRack-Plugin-MIFS",
+  "version-string": "1.0"
   "dependencies": [
     {
       "name": "libyuv",
