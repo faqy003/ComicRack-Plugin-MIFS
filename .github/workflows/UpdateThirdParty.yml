@@ -41,6 +41,6 @@ jobs:
       with:
         name: Artifacts
         path: |
-          ${{ steps.runvcpkg.outputs.VCPKG_INSTALLED_DIR }}/vcpkg/bincache/*
+          ${{ steps.runvcpkg.outputs.VCPKG_INSTALLED_DIR }}/*
           libavif/build/*
       
