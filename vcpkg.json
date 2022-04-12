@@ -1,5 +1,5 @@
 {
-  "name": "ComicRack-Plugin-MIFS",
+  "name": "cr-plugin-mifs",
   "version-string": "1.0",
   "dependencies": [
     {
