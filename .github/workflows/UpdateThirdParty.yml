@@ -5,7 +5,6 @@ on:
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
-  VCPKG_INSTALLED_DIR: '${{ github.workspace }}/installed'
   BUILD_TYPE: Release
 
 jobs:
@@ -18,16 +17,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: make dir
-      run: 'mkdir ${{ env.VCPKG_INSTALLED_DIR }}'
-    
     - name: run-vcpkg
       uses: lukka/run-vcpkg@v10.2
       id: runvcpkg
       with:
           runVcpkgInstall: true
           vcpkgGitCommitId: 'bf43f7d00f09b225f866a5227b8464a27c86a8c0'
-          runVcpkgFormatString: '[`install`, `--clean-after-build`, `--x-install-root`, `$[env.VCPKG_INSTALLED_DIR]`, `--triplet`, `$[env.VCPKG_DEFAULT_TRIPLET]`]'
     
 #     - name: build libavif
 #       env: 
@@ -46,7 +41,6 @@ jobs:
       with:
         name: Artifacts
         path: |
-          ${{ github.workspace }}/vcpkg/installed/*
-          ${{ env.VCPKG_INSTALLED_DIR }}/*
+          ${{ env.VCPKG_ROOT }}/installed/*
           libavif/build/*
       
