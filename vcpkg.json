@@ -5,10 +5,6 @@
     {
       "name": "dav1d",
       "platform": "windows"
-    },
-    {
-      "name": "libavif",
-      "platform": "windows"
     }
   ]
 }
