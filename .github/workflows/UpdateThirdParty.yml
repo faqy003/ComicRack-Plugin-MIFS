@@ -30,8 +30,12 @@ jobs:
         git clone --depth 1 https://github.com/AOMediaCodec/libavif.git
         cd libavif
         mkdir build && cd build
-        cmake .. -DCMAKE_BUILD_TYPE=Release -DAVIF_CODEC_DAV1D=ON -DBUILD_SHARED_LIBS=OFF -DAVIF_CODEC_AOM=OFF -DCMAKE_INSTALL_PREFIX=${{ env.VCPKG_INSTALLED_DIR }}
-        cmake --build .
+        cmake .. -DCMAKE_BUILD_TYPE=Release -DAVIF_CODEC_DAV1D=ON -DBUILD_SHARED_LIBS=OFF -DAVIF_CODEC_AOM=OFF -DCMAKE_INSTALL_PREFIX=${{ env.VCPKG_INSTALLED_DIR }}'
+    
+    - name: build libavif
+      run: |
+        cmake --build . --config Release
+        cmake --install .
       
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.0.0
