@@ -3,11 +3,11 @@
   "version-string": "1.0",
   "dependencies": [
     {
-      "name": "libyuv",
+      "name": "dav1d",
       "platform": "windows"
     },
     {
-      "name": "dav1d",
+      "name": "libavif",
       "platform": "windows"
     }
   ]
