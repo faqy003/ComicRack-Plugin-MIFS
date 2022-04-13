@@ -37,8 +37,8 @@ jobs:
     - name: Build libavif
       working-directory: ./libavif/build
       run: |
-        make -f CMakeCache.txt
-        make install
+        cmake --build .
+        cmake --install .
       
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.0.0
