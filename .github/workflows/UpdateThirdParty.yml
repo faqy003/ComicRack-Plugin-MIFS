@@ -24,15 +24,20 @@ jobs:
       with:
           runVcpkgInstall: true
           vcpkgGitCommitId: 'bf43f7d00f09b225f866a5227b8464a27c86a8c0'
+        
+    - name: Setup Ninja
+      uses: ashutoshvarma/setup-ninja@v1.1
+      with:
+        platform: win
     
-    - name: setup libavif
+    - name: build libavif
       env: 
         PKG_CONFIG_PATH : '${{ github.workspace }}/${{ env.VCPKG_INSTALLED_DIR }}/${{ env.VCPKG_DEFAULT_TRIPLET }}/lib/pkgconfig'
       run: |
         git clone --depth 1 https://github.com/AOMediaCodec/libavif.git
         cd libavif
         mkdir build && cd build
-        cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DAVIF_CODEC_DAV1D=ON
+        cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release -DAVIF_CODEC_DAV1D=ON
         ninja
       
     - name: Upload a Build Artifact
