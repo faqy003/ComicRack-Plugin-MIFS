@@ -27,7 +27,7 @@ jobs:
     
     - name: build libavif
       env: 
-        PKG_CONFIG_PATH : '../${{ env.VCPKG_INSTALLED_DIR }}'
+        PKG_CONFIG_PATH : '${{ github.workspace }}/${{ env.VCPKG_INSTALLED_DIR }}/${{ env.VCPKG_DEFAULT_TRIPLET }}/lib/pkgconfig'
       run: |
         git clone --depth 1 https://github.com/AOMediaCodec/libavif.git
         cd libavif
