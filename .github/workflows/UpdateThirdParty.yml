@@ -5,7 +5,7 @@ on:
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
-  VCPKG_INSTALLED_DIR: ${{ github.workspace }}/vcpkg/installed
+  VCPKG_INSTALLED_DIR: '${{ github.workspace }}/vcpkg_installed/'
   BUILD_TYPE: Release
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
     
 #     - name: build libavif
 #       env: 
-#         PKG_CONFIG_PATH : '${{ github.workspace }}/vcpkg/installed/x64-windows/lib/pkgconfig'
+#         PKG_CONFIG_PATH : '${{ env.VCPKG_INSTALLED_DIR }}'
 #       run: |
 #         git clone --depth 1 https://github.com/AOMediaCodec/libavif.git
 #         cd libavif
@@ -42,6 +42,6 @@ jobs:
       with:
         name: Artifacts
         path: |
-          ${{ github.workspace }}/vcpkg/installed/*
+          ${{ env.VCPKG_INSTALLED_DIR }}*
           libavif/build/*
       
