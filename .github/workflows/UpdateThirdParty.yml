@@ -33,6 +33,7 @@ jobs:
         cmake .. -DCMAKE_BUILD_TYPE=Release -DAVIF_CODEC_DAV1D=ON -DBUILD_SHARED_LIBS=OFF -DAVIF_CODEC_AOM=OFF -DCMAKE_INSTALL_PREFIX=${{ env.VCPKG_INSTALLED_DIR }}
     
     - name: build libavif
+      working-directory: ./libavif/build
       run: |
         cmake --build . --config Release
         cmake --install .
