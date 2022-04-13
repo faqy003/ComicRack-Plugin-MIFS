@@ -5,7 +5,7 @@ on:
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
-  VCPKG_INSTALLED_DIR: '${{ github.workspace }}/vcpkg_installed/'
+  VCPKG_INSTALLED_DIR: vcpkg_installed
   BUILD_TYPE: Release
 
 jobs:
@@ -36,12 +36,16 @@ jobs:
 #         make -j $(($(nproc) + 1))
 #         cd ../..
         
-        
+    - name: Zip
+      run: 7z a output.zip ./vcpkg_installed/* -r
+      shell: bash
+      
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.0.0
       with:
         name: Artifacts
         path: |
-          ${{ env.VCPKG_INSTALLED_DIR }}*
+          output.zip
+          ${{ env.VCPKG_INSTALLED_DIR }}/*
           libavif/build/*
       
