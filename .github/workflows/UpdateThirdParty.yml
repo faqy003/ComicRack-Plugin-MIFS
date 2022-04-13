@@ -5,7 +5,6 @@ on:
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
-  VCPKG_INSTALLED_DIR: '${{ github.workspace }}/installed'
   BUILD_TYPE: Release
 
 jobs:
@@ -24,6 +23,7 @@ jobs:
       with:
           runVcpkgInstall: true
           vcpkgGitCommitId: 'bf43f7d00f09b225f866a5227b8464a27c86a8c0'
+          runVcpkgFormatString: '[`install`, `--clean-after-build`, `--x-install-root`, `$[env.VCPKG_INSTALLED_DIR]`, `--triplet`, `$[env.VCPKG_DEFAULT_TRIPLET]`]'
     
 #     - name: build libavif
 #       env: 
@@ -42,6 +42,7 @@ jobs:
       with:
         name: Artifacts
         path: |
-          ${{ env.VCPKG_INSTALLED_DIR }}/*
+          ${{ github.workspace }}/vcpkg/installed/*
+          ${{ steps.runvcpkg.env.VCPKG_INSTALLED_DIR }}/*
           libavif/build/*
       
