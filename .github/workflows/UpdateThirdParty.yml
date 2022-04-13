@@ -4,9 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   VCPKG_INSTALLED_DIR: vcpkg_installed
-  BUILD_TYPE: Release
 
 jobs:
   build:
@@ -32,7 +30,7 @@ jobs:
         git clone --depth 1 https://github.com/AOMediaCodec/libavif.git
         cd libavif
         mkdir build && cd build
-        cmake .. -DCMAKE_BUILD_TYPE=Release -DAVIF_CODEC_DAV1D=ON -DBUILD_SHARED_LIBS=OFF -DAVIF_CODEC_AOM=OFF -DCMAKE_INSTALL_PREFIX=${{ env.VCPKG_INSTALLED_DIR }}
+        cmake .. -DCMAKE_BUILD_TYPE=Debug -DAVIF_CODEC_DAV1D=ON -DBUILD_SHARED_LIBS=OFF -DAVIF_CODEC_AOM=OFF -DCMAKE_INSTALL_PREFIX=${{ env.VCPKG_INSTALLED_DIR }}
         
     - name: Build libavif
       working-directory: ./libavif/build
