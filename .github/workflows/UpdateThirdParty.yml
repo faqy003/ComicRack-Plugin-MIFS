@@ -37,7 +37,7 @@ jobs:
     - name: Build libavif
       working-directory: ./libavif/build
       run: |
-        make 
+        make -f makefile.txt
         make install
       
     - name: Upload a Build Artifact
