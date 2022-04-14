@@ -3,6 +3,6 @@
   "version-string": "1.0",
   "dependencies": [
     "libyuv",
-    "dav1d",
+    "dav1d"
   ]
 }
