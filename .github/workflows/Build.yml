@@ -38,7 +38,7 @@ jobs:
     - name: Download artifact
       uses: dawidd6/action-download-artifact@v2
       with:
-        workflow: UpdateDependencies
+        workflow: UpdateDependencies.yml
         github_token: ${{secrets.MY_TEST_TOKEN}}
         name: installed
         path: installed
