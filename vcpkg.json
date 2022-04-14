@@ -1,0 +1,9 @@
+{
+  "name": "comicrack-plugin-mifs",
+  "version-string": "1.0",
+  "dependencies": [
+    "libyuv",
+    "dav1d",
+    "libjxl"
+  ]
+}
