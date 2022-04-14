@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{2e0404cc-f0b8-40b5-b2d2-66bf725fa228}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -22,63 +25,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="dllmain.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="avif\include\avif.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="avif\include\internal.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="jxl\butteraugli.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="jxl\butteraugli_cxx.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="jxl\codestream_header.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="jxl\color_encoding.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="jxl\decode.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="jxl\decode_cxx.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="jxl\encode.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="jxl\encode_cxx.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="jxl\jxl_export.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="jxl\jxl_threads_export.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="jxl\memory_manager.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="jxl\parallel_runner.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="jxl\resizable_parallel_runner.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="jxl\resizable_parallel_runner_cxx.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="jxl\thread_parallel_runner.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="jxl\thread_parallel_runner_cxx.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="jxl\types.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -91,10 +37,23 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="avif\lib\avif_x64_Release.lib" />
-    <Library Include="dav1d.lib" />
-    <Library Include="aom.lib" />
-    <Library Include="jxl.lib" />
-    <Library Include="jxl_threads.lib" />
+    <Library Include="lib\aom.lib">
+      <Filter>lib</Filter>
+    </Library>
+    <Library Include="lib\avif.lib">
+      <Filter>lib</Filter>
+    </Library>
+    <Library Include="lib\dav1d.lib">
+      <Filter>lib</Filter>
+    </Library>
+    <Library Include="lib\jxl.lib">
+      <Filter>lib</Filter>
+    </Library>
+    <Library Include="lib\jxl_threads.lib">
+      <Filter>lib</Filter>
+    </Library>
+    <Library Include="lib\yuv.lib">
+      <Filter>lib</Filter>
+    </Library>
   </ItemGroup>
 </Project>

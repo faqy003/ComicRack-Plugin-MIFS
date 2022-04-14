@@ -1,9 +1,9 @@
 ﻿// dllmain.cpp : 定义 DLL 应用程序的入口点。
 #include "pch.h"
 #include "dllmain.h"
-#include "avif/include/avif.h"
-#include "jxl/decode_cxx.h"
-#include "jxl/resizable_parallel_runner_cxx.h"
+#include <avif/avif.h>
+#include <jxl/decode_cxx.h>
+#include <jxl/resizable_parallel_runner_cxx.h>
 #include <vector>
 
 BOOL APIENTRY DllMain( HMODULE hModule,

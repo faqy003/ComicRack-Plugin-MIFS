@@ -79,10 +79,19 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(ProjectDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(ProjectDir)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <PublicIncludeDirectories>
+    </PublicIncludeDirectories>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(ProjectDir)$(Platform)\$(Configuration)\</OutDir>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <IncludePath>$(ProjectDir)include;$(IncludePath)</IncludePath>
+    <PublicIncludeDirectories>
+    </PublicIncludeDirectories>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -153,27 +162,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="avif\include\avif.h" />
-    <ClInclude Include="avif\include\internal.h" />
     <ClInclude Include="dllmain.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="jxl\butteraugli.h" />
-    <ClInclude Include="jxl\butteraugli_cxx.h" />
-    <ClInclude Include="jxl\codestream_header.h" />
-    <ClInclude Include="jxl\color_encoding.h" />
-    <ClInclude Include="jxl\decode.h" />
-    <ClInclude Include="jxl\decode_cxx.h" />
-    <ClInclude Include="jxl\encode.h" />
-    <ClInclude Include="jxl\encode_cxx.h" />
-    <ClInclude Include="jxl\jxl_export.h" />
-    <ClInclude Include="jxl\jxl_threads_export.h" />
-    <ClInclude Include="jxl\memory_manager.h" />
-    <ClInclude Include="jxl\parallel_runner.h" />
-    <ClInclude Include="jxl\resizable_parallel_runner.h" />
-    <ClInclude Include="jxl\resizable_parallel_runner_cxx.h" />
-    <ClInclude Include="jxl\thread_parallel_runner.h" />
-    <ClInclude Include="jxl\thread_parallel_runner_cxx.h" />
-    <ClInclude Include="jxl\types.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -186,11 +176,12 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="aom.lib" />
-    <Library Include="avif\lib\avif_x64_Release.lib" />
-    <Library Include="dav1d.lib" />
-    <Library Include="jxl.lib" />
-    <Library Include="jxl_threads.lib" />
+    <Library Include="lib\aom.lib" />
+    <Library Include="lib\avif.lib" />
+    <Library Include="lib\dav1d.lib" />
+    <Library Include="lib\jxl.lib" />
+    <Library Include="lib\jxl_threads.lib" />
+    <Library Include="lib\yuv.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
