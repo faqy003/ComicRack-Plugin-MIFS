@@ -42,14 +42,23 @@ jobs:
         github_token: ${{secrets.MY_TEST_TOKEN}}
         name: installed
         path: installed
-        
-    - name: Display structure of downloaded files
-      working-directory: installed
-      run: ls -R
-      
-    - name: zip
+    
+    - name: move to output
       run: |
-        7z a ComicRack-Plugin-MIFS.zip output/*
+        mv bin/Release/net461/0Harmony.dll output/0Harmony.dll
+        mv bin/Release/net461/ComicRack.Plugin.Avif.dll output/ComicRack.Plugin.Avif.dll
+        mv libfunc/x64/Release/libfunc.dll output/libfunc.dll
+        mv installed/bin/brotlicommon.dll output/brotlicommon.dll
+        mv installed/bin/brotlidec.dll output/brotlidec.dll
+        mv installed/bin/brotlienc.dll output/brotlienc.dll
+        mv installed/bin/dav1d.dll output/dav1d.dll
+        mv installed/bin/jxl.dll output/jxl.dll
+        mv installed/bin/jxl_threads.dll output/jxl_threads.dll
+        mv installed/bin/lcms2.dll output/lcms2.dll
+      
+    - name: make crplugin
+      run: |
+        7z a ComicRack-Plugin-MIFS.zip ./output/*
         mv ComicRack-Plugin-MIFS.zip ComicRack-Plugin-MIFS.crplugin
       
     - name: Upload a Build Artifact
