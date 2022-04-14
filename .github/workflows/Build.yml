@@ -35,8 +35,8 @@ jobs:
       # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
       run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
       
-    - name: Download a Build Artifact
-      uses: actions/download-artifact@v3.0.0
+    - name: Download artifact
+      uses: aochmann/actions-download-artifact@1.0.0
       with:
         name: installed
         path: installed
