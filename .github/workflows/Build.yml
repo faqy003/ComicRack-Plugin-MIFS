@@ -58,15 +58,15 @@ jobs:
         mv installed/bin/jxl_threads.dll output/jxl_threads.dll
         mv installed/bin/lcms2.dll output/lcms2.dll
       
-    - name: make crplugin
-      run: |
-        7z a ComicRack-Plugin-MIFS.zip ./output/*
-        mv ComicRack-Plugin-MIFS.zip ComicRack-Plugin-MIFS.crplugin
+#     - name: make crplugin
+#       run: |
+#         7z a ComicRack-Plugin-MIFS.zip ./output/*
+#         mv ComicRack-Plugin-MIFS.zip ComicRack-Plugin-MIFS.crplugin
       
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.0.0
       with:
         name: ComicRack_Plugin_MIFS
         path: |
-          ComicRack-Plugin-MIFS.crplugin
+          ./output/*
       
