@@ -5,7 +5,7 @@ from ComicRack.Plugin.Avif import Patchs
 
 #@Name Modern Image Formats Support
 #@Hook ReaderResized
-#@Enabled false
+#@Enabled true
 #@Description Avif Support
 def OnStartup(*args):
 	Patchs.DoPatching()
