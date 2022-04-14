@@ -57,6 +57,9 @@ jobs:
         mv installed/bin/jxl.dll output/jxl.dll
         mv installed/bin/jxl_threads.dll output/jxl_threads.dll
         mv installed/bin/lcms2.dll output/lcms2.dll
+        mv README.md output/README.md
+        mv LICENSE.txt output/LICENSE.txt
+        mv NOTICE.txt output/NOTICE.txt
       
 #     - name: make crplugin
 #       run: |
