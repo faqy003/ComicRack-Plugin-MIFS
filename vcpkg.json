@@ -1,10 +1,8 @@
 {
-  "name": "cr-plugin-mifs",
+  "name": "comicrack-plugin-mifs",
   "version-string": "1.0",
   "dependencies": [
-    {
-      "name": "dav1d",
-      "platform": "windows"
-    }
+    "libyuv",
+    "dav1d",
   ]
 }
