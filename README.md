@@ -19,7 +19,7 @@ You can't add any new format support without touching the core of ComicRack. Tha
 
 What plugin do is make ComicRack treats all new formats as webp file. When ComicRack processing webp files we check if they are new formats and decode them by ourself.
 
-The pluin must be loaded at the very beginning in order to avoid possible issues. So it using `ReaderResized` hook to trigger its initialisation.
+The plugin must be loaded at the very beginning in order to avoid possible issues. So it using `ReaderResized` hook to trigger its initialisation.
 
 # Plan
 - Replace 3rdparty decoder with a better or slim one.
